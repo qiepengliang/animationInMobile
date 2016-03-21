@@ -1,9 +1,9 @@
 var slide = (function() {
-   //每个动画按照前后顺序排列，不能打乱 APrev, ANext, BPrev, BNext 样式命名最好解耦出来，比如按照left或者right或者up和down来命名比较好
+   //样式命名最好解耦出来，比如按照left或者right或者up和down来命名比较好
     var animations = ['navOut-left', 'navIn-left', 'navOut-right', 'navIn-right'];
     //去掉浏览器的默认滑动行为
     document.addEventListener('touchmove', function (event) {
-       event.preventDefault();
+       event.preventDefault().
     }, false);
     //负责判断滑动对象
     function _judeElement(current, direction) {
@@ -32,8 +32,8 @@ var slide = (function() {
 
     //判断应用样式
     function _judeClass(direction) {
-        var currentAddCls = 'navOut-'+direction;
-        var brotherAddCls = animations[animations.indexOf(currentAddCls) + 1];
+        var currentAddCls = 'navOut-'+ direction;
+        var brotherAddCls = 'navIn-' + direction;
         
         return {
             currentAddCls: currentAddCls,
