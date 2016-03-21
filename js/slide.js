@@ -3,7 +3,7 @@ var slide = (function() {
     var animations = ['navOut-left', 'navIn-left', 'navOut-right', 'navIn-right'];
     //去掉浏览器的默认滑动行为
     document.addEventListener('touchmove', function (event) {
-       event.preventDefault().
+       event.preventDefault();
     }, false);
     //负责判断滑动对象
     function _judeElement(current, direction) {
